@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge AluraGeek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css" media="screen" />
     <link rel="stylesheet" href="style.css">
     <div class="head-container">
         <div class="logo" >
-            <img class="logo-img" src="img/Corazon.png" alt="Logo Corazon">
+            <img class="logo-img" src="/assets/icon/Corazon.png" alt="Logo Corazon">
             <svg width="213" height="21" viewBox="0 0 213 21" fill="none">
                 <path
                     d="M0 21V6H3V3H6V0H15V3H18V6H21V21H15V15H6V21H0ZM6 12H15V6H12V3H9V6H6V12ZM27
@@ -24,32 +30,93 @@
             </svg>
         </div>
     </div>
-    <script src="scrips.js"></script>
+    <script defer src="scrips.js"></script>
 </head>
 
 <body>
     <main class="main">
         <section>
             <div class="main-product">
-                <h1>Mis Produtos</h1>
+                <h1>MIS PRODUCTOS:</h1>
                 <div class="main-product-list">
                     <div class="card">
-                        <img src="./assets/producto1.png" />
+                        <img src="./assets/img/producto1.png" />
                         <div class="card-container--info">
                           <p>Nombre</p>
                           <div class="card-container--value">
                             <p>$ 00.00</p>
-                            <img src="./assets/trashIcon.png" />
+                            <img src="./assets/icon/trashIcon.png" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img src="./assets/img/producto1.png" />
+                        <div class="card-container--info">
+                          <p>Nombre</p>
+                          <div class="card-container--value">
+                            <p>$ 00.00</p>
+                            <img src="./assets/icon/trashIcon.png" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img src="./assets/img/producto1.png" />
+                        <div class="card-container--info">
+                          <p>Nombre</p>
+                          <div class="card-container--value">
+                            <p>$ 00.00</p>
+                            <img src="./assets/icon/trashIcon.png" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img src="./assets/img/producto1.png" />
+                        <div class="card-container--info">
+                          <p>Nombre</p>
+                          <div class="card-container--value">
+                            <p>$ 00.00</p>
+                            <img src="./assets/icon/trashIcon.png" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img src="./assets/img/producto1.png" />
+                        <div class="card-container--info">
+                          <p>Nombre</p>
+                          <div class="card-container--value">
+                            <p>$ 00.00</p>
+                            <img src="./assets/icon/trashIcon.png" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <img src="./assets/img/producto1.png" />
+                        <div class="card-container--info">
+                          <p>Nombre</p>
+                          <div class="card-container--value">
+                            <p>$ 00.00</p>
+                            <img src="./assets/icon/trashIcon.png" />
                           </div>
                         </div>
                       </div>
                 </div>
             </div>
             <div class="main-form">
-
+                   <h1>AGREGAR PRODUCTO:</h1>
+                    <div class="form-container">
+                        <form>
+                            <input type="text" id="product-name" placeholder="nombre...">
+                            <input type="number" id="product-price" placeholder="precio...">
+                            <label for="product-image">
+                                <span class="file-label">imagen...</span>
+                                <input type="file" id="product-image" accept="image/*">
+                            </label>                            
+                        </form>
+                        <button id="submit-btn">Enviar</button>
+                        <button id="clear-btn">Limpiar</button>
+                    </div>
             </div>
         </section>
     </main>
 </body>
-
 </html>
