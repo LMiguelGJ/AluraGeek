@@ -2,9 +2,10 @@ import { conectaAPI } from "./conectaAPI.js";
 
 const lista = document.querySelector("[card-list]");
 
-function construyeCard(nombre,precio,imagen){
+function construyeCard(id,nombre,precio,imagen){
     const card = document.createElement("div");
     card.className="card";
+    card.id=id
     
     card.innerHTML=
     `
@@ -13,11 +14,21 @@ function construyeCard(nombre,precio,imagen){
       <p>${nombre}</p>
       <div class="card-container--value">
         <p>$ ${precio}</p>
-        <img src="./assets/icon/trashIcon.png" />
+        <img src="./assets/icon/trashIcon.png" data-delate data-id="${id}"/>
       </div>
     </div>
   </div>
   `
+  const deleteIcons = card.querySelector('[data-delate]');
+
+  deleteIcons.addEventListener('click', (event) => {
+    const cardId = event.target.getAttribute('data-id');
+
+    if (cardId) {
+        conectaAPI.delateProduct(cardId);
+        console.log(cardId)
+    }
+});
     return card;
 }
 
@@ -25,7 +36,7 @@ function construyeCard(nombre,precio,imagen){
 async function listaProductos(){
     const listaAPI = await conectaAPI.listaProductos();
     console.log(listaAPI)
-    listaAPI.forEach(element => lista.appendChild(construyeCard(element.nombre,element.precio,element.imagen)));
+    listaAPI.forEach(element => lista.appendChild(construyeCard(element.id,element.nombre,element.precio,element.imagen)));
 
 }
 

@@ -19,7 +19,15 @@ async function createProduct(nombre,precio,imagen) {
     return conexionConvertida;
 }
 
+async function delateProduct(id) {
+    const conexion = await fetch(`http://localhost:3001/productos/${id}`, {
+        method: 'DELETE'
+    })
+    const conexionConvertida = await conexion.json();
+    return conexionConvertida;
+}
+
 
 export const conectaAPI={
-    listaProductos,createProduct
+    listaProductos,createProduct,delateProduct
 }

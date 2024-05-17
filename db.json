@@ -4,55 +4,7 @@
       "nombre": "Captain America",
       "precio": "10",
       "imagen": "https://http2.mlstatic.com/D_NQ_NP_643523-MLA49180554005_022022-O.webp",
-      "id": "1"
-    },
-    {
-      "nombre": "Captain America",
-      "precio": "10",
-      "imagen": "https://http2.mlstatic.com/D_NQ_NP_643523-MLA49180554005_022022-O.webp",
-      "id": "2"
-    },
-    {
-      "nombre": "Captain America",
-      "precio": "10",
-      "imagen": "https://http2.mlstatic.com/D_NQ_NP_643523-MLA49180554005_022022-O.webp",
-      "id": "3"
-    },
-    {
-      "nombre": "Captain America",
-      "precio": "10",
-      "imagen": "https://http2.mlstatic.com/D_NQ_NP_643523-MLA49180554005_022022-O.webp",
-      "id": "4"
-    },
-    {
-      "nombre": "Captain America",
-      "precio": "10",
-      "imagen": "https://http2.mlstatic.com/D_NQ_NP_643523-MLA49180554005_022022-O.webp",
       "id": "5"
-    },
-    {
-      "id": "545a",
-      "nombre": "Luna",
-      "precio": "222",
-      "imagen": "https://previews.123rf.com/images/aprillrain/aprillrain2212/aprillrain221200638/196354278-imagen-de-caricatura-de-un-astronauta-sentado-en-una-luna-ilustraci%C3%B3n-de-alta-calidad.jpg"
-    },
-    {
-      "id": "364e",
-      "nombre": "Luna",
-      "precio": "343",
-      "imagen": "https://previews.123rf.com/images/aprillrain/aprillrain2212/aprillrain221200638/196354278-imagen-de-caricatura-de-un-astronauta-sentado-en-una-luna-ilustraci%C3%B3n-de-alta-calidad.jpg"
-    },
-    {
-      "id": "4863",
-      "nombre": "Luna",
-      "precio": "43434",
-      "imagen": "https://previews.123rf.com/images/aprillrain/aprillrain2212/aprillrain221200638/196354278-imagen-de-caricatura-de-un-astronauta-sentado-en-una-luna-ilustraci%C3%B3n-de-alta-calidad.jpg"
-    },
-    {
-      "id": "e9ba",
-      "nombre": "Luna",
-      "precio": "34343",
-      "imagen": "https://previews.123rf.com/images/aprillrain/aprillrain2212/aprillrain221200638/196354278-imagen-de-caricatura-de-un-astronauta-sentado-en-una-luna-ilustraci%C3%B3n-de-alta-calidad.jpg"
     },
     {
       "id": "b80d",
@@ -61,39 +13,9 @@
       "imagen": "https://previews.123rf.com/images/aprillrain/aprillrain2212/aprillrain221200638/196354278-imagen-de-caricatura-de-un-astronauta-sentado-en-una-luna-ilustraci%C3%B3n-de-alta-calidad.jpg"
     },
     {
-      "id": "5dc4",
-      "nombre": "Luna",
-      "precio": "443434",
-      "imagen": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.123rf.com%2Fphoto_196354278_imagen-de-caricatura-de-un-astronauta-sentado-en-una-luna-ilustraci%25C3%25B3n-de-alta-calidad.html&psig=AOvVaw0mbyKcJadG2zBynW0-xXIu&ust=1716055276044000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOjHlZqilYYDFQAAAAAdAAAAABAS"
-    },
-    {
-      "id": "d86b",
-      "nombre": "Luna",
-      "precio": "23213",
-      "imagen": "https://previews.123rf.com/images/aprillrain/aprillrain2212/aprillrain221200638/196354278-imagen-de-caricatura-de-un-astronauta-sentado-en-una-luna-ilustraci%C3%B3n-de-alta-calidad.jpg"
-    },
-    {
       "id": "4ec0",
       "nombre": "Luna",
       "precio": "32323",
-      "imagen": "https://previews.123rf.com/images/aprillrain/aprillrain2212/aprillrain221200638/196354278-imagen-de-caricatura-de-un-astronauta-sentado-en-una-luna-ilustraci%C3%B3n-de-alta-calidad.jpg"
-    },
-    {
-      "id": "29b1",
-      "nombre": "Luna",
-      "precio": "233",
-      "imagen": "https://previews.123rf.com/images/aprillrain/aprillrain2212/aprillrain221200638/196354278-imagen-de-caricatura-de-un-astronauta-sentado-en-una-luna-ilustraci%C3%B3n-de-alta-calidad.jpg"
-    },
-    {
-      "id": "a72f",
-      "nombre": "Luna",
-      "precio": "212",
-      "imagen": "https://previews.123rf.com/images/aprillrain/aprillrain2212/aprillrain221200638/196354278-imagen-de-caricatura-de-un-astronauta-sentado-en-una-luna-ilustraci%C3%B3n-de-alta-calidad.jpg"
-    },
-    {
-      "id": "a1df",
-      "nombre": "Luna",
-      "precio": "2323",
       "imagen": "https://previews.123rf.com/images/aprillrain/aprillrain2212/aprillrain221200638/196354278-imagen-de-caricatura-de-un-astronauta-sentado-en-una-luna-ilustraci%C3%B3n-de-alta-calidad.jpg"
     },
     {
@@ -109,27 +31,9 @@
       "imagen": "https://previews.123rf.com/images/aprillrain/aprillrain2212/aprillrain221200638/196354278-imagen-de-caricatura-de-un-astronauta-sentado-en-una-luna-ilustraci%C3%B3n-de-alta-calidad.jpg"
     },
     {
-      "id": "4867",
+      "id": "9f8b",
       "nombre": "Luna",
-      "precio": "4345",
-      "imagen": "https://previews.123rf.com/images/aprillrain/aprillrain2212/aprillrain221200638/196354278-imagen-de-caricatura-de-un-astronauta-sentado-en-una-luna-ilustraci%C3%B3n-de-alta-calidad.jpg"
-    },
-    {
-      "id": "06a4",
-      "nombre": "Luna",
-      "precio": "564456",
-      "imagen": "https://previews.123rf.com/images/aprillrain/aprillrain2212/aprillrain221200638/196354278-imagen-de-caricatura-de-un-astronauta-sentado-en-una-luna-ilustraci%C3%B3n-de-alta-calidad.jpg"
-    },
-    {
-      "id": "7d9d",
-      "nombre": "Luna6767",
-      "precio": "6767",
-      "imagen": "https://previews.123rf.com/images/aprillrain/aprillrain2212/aprillrain221200638/196354278-imagen-de-caricatura-de-un-astronauta-sentado-en-una-luna-ilustraci%C3%B3n-de-alta-calidad.jpg"
-    },
-    {
-      "id": "30dd",
-      "nombre": "Luna",
-      "precio": "67676",
+      "precio": "5656",
       "imagen": "https://previews.123rf.com/images/aprillrain/aprillrain2212/aprillrain221200638/196354278-imagen-de-caricatura-de-un-astronauta-sentado-en-una-luna-ilustraci%C3%B3n-de-alta-calidad.jpg"
     }
   ]

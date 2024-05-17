@@ -16,7 +16,6 @@ async function createProduct(){
     }
 }
 
-
 // Agregar event listeners para los botones
 submitBtn.addEventListener('click', async function() {
     console.log('Se ha hecho clic en el botón "Enviar".');
