@@ -1,0 +1,34 @@
+{
+  "productos": [
+    {
+      "nombre": "Captain America",
+      "precio": "10",
+      "imagen": "https://http2.mlstatic.com/D_NQ_NP_643523-MLA49180554005_022022-O.webp",
+      "id": 1
+    },
+    {
+      "nombre": "Captain America",
+      "precio": "10",
+      "imagen": "https://http2.mlstatic.com/D_NQ_NP_643523-MLA49180554005_022022-O.webp",
+      "id": 2
+    },
+    {
+      "nombre": "Captain America",
+      "precio": "10",
+      "imagen": "https://http2.mlstatic.com/D_NQ_NP_643523-MLA49180554005_022022-O.webp",
+      "id": 3
+    },
+    {
+      "nombre": "Captain America",
+      "precio": "10",
+      "imagen": "https://http2.mlstatic.com/D_NQ_NP_643523-MLA49180554005_022022-O.webp",
+      "id": 4
+    },
+    {
+      "nombre": "Captain America",
+      "precio": "10",
+      "imagen": "https://http2.mlstatic.com/D_NQ_NP_643523-MLA49180554005_022022-O.webp",
+      "id": 5
+    }
+  ]
+}
