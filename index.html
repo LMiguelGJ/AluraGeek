@@ -31,6 +31,7 @@
         </div>
     </div>
     <script defer src="/js/scrips.js" type="module"></script>
+    <script defer src="/js/createProduct.js" type="module"></script>
 </head>
 
 <body>
@@ -54,12 +55,12 @@
             <div class="main-form">
                    <h1>AGREGAR PRODUCTO:</h1>
                     <div class="form-container">
-                        <form>
-                            <input type="text" id="product-name" placeholder="nombre...">
-                            <input type="number" id="product-price" placeholder="precio...">
-                            <input type="url" id="product-image" placeholder="imagen...">
-                            <button id="submit-btn">Enviar</button>
-                            <button id="clear-btn">Limpiar</button>
+                        <form data-formulario>
+                            <input type="text" id="product-name" placeholder="nombre..." data-nombre>
+                            <input type="number" id="product-price" placeholder="precio..." data-precio>
+                            <input type="url" id="product-image" placeholder="imagen..." data-imagen>
+                            <button type="submit" id="submit-btn">Enviar</button>
+                            <button type="button" id="clear-btn">Limpiar</button>
                         </form>
                     </div>
             </div>
