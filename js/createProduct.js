@@ -1,0 +1,28 @@
+import { conectaAPI } from "./conectaAPI.js";
+
+const formulario = document.querySelector("[data-formulario]");
+// Capturar los botones
+const submitBtn = document.getElementById('submit-btn');
+const clearBtn = document.getElementById('clear-btn');
+
+async function createProduct(){
+    const nombre= document.querySelector("[data-nombre]").value;
+    const precio=document.querySelector("[data-precio]").value;
+    const imagen = document.querySelector("[data-imagen]").value;
+
+    if (!(nombre == "" || precio == "" || imagen == "")) {
+        await conectaAPI.createProduct(nombre,precio,imagen)
+        console.log('Agregado!.');
+    }
+}
+
+
+// Agregar event listeners para los botones
+submitBtn.addEventListener('click', async function() {
+    console.log('Se ha hecho clic en el botón "Enviar".');
+    createProduct()
+});
+
+clearBtn.addEventListener('click', function() {
+    console.log('Se ha hecho clic en el botón "Limpiar".');
+});
