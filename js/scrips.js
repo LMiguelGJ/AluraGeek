@@ -9,11 +9,11 @@ function construyeCard(id,nombre,precio,imagen){
     
     card.innerHTML=
     `
-    <img src="${imagen}" />
-    <div class="card-container--info">
-      <p>${nombre}</p>
-      <div class="card-container--value">
-        <p>$ ${precio}</p>
+    <img data-id="${id}" src="${imagen}" />
+    <div data-id="${id}" class="card-container--info">
+      <p data-id="${id}">${nombre}</p>
+      <div class="card-container--value" data-id="${id}">
+        <p data-id="${id}">$ ${precio}</p>
         <img src="./assets/icon/trashIcon.png" data-delate data-id="${id}"/>
       </div>
     </div>
@@ -26,9 +26,30 @@ function construyeCard(id,nombre,precio,imagen){
 
     if (cardId) {
       conectaAPI.delateProduct(cardId);
-      console.log(cardId)
     }
   });
+
+
+  card.addEventListener('click', (event) => {
+    const cardId = event.target.getAttribute('data-id');
+    const formulario = document.querySelector("[data-formulario]");
+    formulario.id = cardId
+
+    const cardElement = document.getElementById(cardId);
+
+    const imgSrc = cardElement.querySelector("img").src;
+    const nombre = cardElement.querySelector(".card-container--info > p").innerText;
+    const precio = cardElement.querySelector(".card-container--value > p").innerText;
+
+    document.querySelector("[data-nombre]").value = nombre
+    document.querySelector("[data-precio]").value = precio.replace(/[$ ]/g, "")
+    document.querySelector("[data-imagen]").value = imgSrc
+
+
+  })
+
+
+
   return card;
 }
 
@@ -36,7 +57,6 @@ function construyeCard(id,nombre,precio,imagen){
 async function listaProductos() {
   try {
     const listaAPI = await conectaAPI.listaProductos();
-    console.log(listaAPI)
     lista.innerHTML = ``;
     listaAPI.forEach(element => lista.appendChild(construyeCard(element.id, element.nombre, element.precio, element.imagen)));
   } catch {

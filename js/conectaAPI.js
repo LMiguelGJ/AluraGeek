@@ -27,7 +27,21 @@ async function delateProduct(id) {
     return conexionConvertida;
 }
 
+async function PutProduct(id,nombre,precio,imagen) {
+    const conexion = await fetch(`http://localhost:3001/productos/${id}`, {
+        method: "PUT",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({
+            nombre:nombre,
+            precio:precio,
+            imagen:imagen
+        })
+    })
+    const conexionConvertida = await conexion.json();
+    return conexionConvertida;
+}
+
 
 export const conectaAPI={
-    listaProductos,createProduct,delateProduct
+    listaProductos,createProduct,delateProduct,PutProduct
 }
