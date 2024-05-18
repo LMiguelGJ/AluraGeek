@@ -6,7 +6,9 @@
     padding: 1rem 0rem 1rem 0rem;
     background-color: #5d04d9;
     box-shadow: 0px 10px 5.8px rgba(0, 0, 0, 0.25);
-
+    position: relative;
+    top: 0%;
+    left: 0%;
 }
 
 .logo{
@@ -218,6 +220,8 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    bottom: 0%;
     padding: 1rem 0rem 0rem 0rem;
     width: 100%;
     background: #5300C8;
@@ -285,12 +289,38 @@ footer p{
     border-radius: 50%;
     animation: spin 1s linear infinite;
     transform: translate(-50%, -50%);
-    z-index: 1000; /* Asegúrate de que el spinner esté encima de otros elementos */
+    z-index: 1000; 
   }
   
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
-  
+}
+
+.main-product h1 {
+    width: 100%; 
+    max-width: 100%; 
+    height: auto; 
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container #product-image {
+    width: 100%; 
+    max-width: 100%; 
+}
+
+@media only screen and (max-width: 991px) {
+    .main section {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 1rem;  
+        gap: 20px; 
+    }
+
+    .main-product-list {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
   

@@ -7,16 +7,22 @@
       "id": "5"
     },
     {
-      "id": "55d3",
-      "nombre": "Luna",
-      "precio": "4535",
-      "imagen": "https://previews.123rf.com/images/aprillrain/aprillrain2212/aprillrain221200638/196354278-imagen-de-caricatura-de-un-astronauta-sentado-en-una-luna-ilustraci%C3%B3n-de-alta-calidad.jpg"
-    },
-    {
       "id": "9f8b",
       "nombre": "Luna",
       "precio": "5656",
       "imagen": "https://previews.123rf.com/images/aprillrain/aprillrain2212/aprillrain221200638/196354278-imagen-de-caricatura-de-un-astronauta-sentado-en-una-luna-ilustraci%C3%B3n-de-alta-calidad.jpg"
+    },
+    {
+      "id": "afe0",
+      "nombre": "ddg",
+      "precio": "3",
+      "imagen": "https://www.aluracursos.com/assets/api/cursos/javascript-validando-formularios.svg"
+    },
+    {
+      "id": "963a",
+      "nombre": "ddg",
+      "precio": "3434",
+      "imagen": "https://www.aluracursos.com/assets/api/cursos/javascript-validando-formularios.svg"
     }
   ]
 }
