@@ -25,18 +25,23 @@ function construyeCard(id,nombre,precio,imagen){
     const cardId = event.target.getAttribute('data-id');
 
     if (cardId) {
-        conectaAPI.delateProduct(cardId);
-        console.log(cardId)
+      conectaAPI.delateProduct(cardId);
+      console.log(cardId)
     }
-});
-    return card;
+  });
+  return card;
 }
 
 
-async function listaProductos(){
+async function listaProductos() {
+  try {
     const listaAPI = await conectaAPI.listaProductos();
     console.log(listaAPI)
-    listaAPI.forEach(element => lista.appendChild(construyeCard(element.id,element.nombre,element.precio,element.imagen)));
+    listaAPI.forEach(element => lista.appendChild(construyeCard(element.id, element.nombre, element.precio, element.imagen)));
+  } catch {
+    lista.innerHTML = `<h2 class="mensaje__titulo">Ha ocurrido un problema con la conexion :(</h2>`;
+  }
+
 
 }
 

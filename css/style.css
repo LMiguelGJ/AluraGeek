@@ -218,9 +218,6 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
     padding: 1rem 0rem 0rem 0rem;
     width: 100%;
     background: #5300C8;
@@ -266,3 +263,34 @@ footer p{
     align-items: center;
     color: #FFFFFF;
 }
+
+.mensaje__titulo {
+    background-color: #f8d7da; /* Fondo rojo claro */
+    color: #721c24; /* Color de texto rojo oscuro */
+    border: 1px solid #f5c6cb; /* Borde rojo */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* styles.css */
+.loading-spinner {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Asegúrate de que el spinner esté encima de otros elementos */
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  

@@ -24,4 +24,7 @@ submitBtn.addEventListener('click', async function() {
 
 clearBtn.addEventListener('click', function() {
     console.log('Se ha hecho clic en el botón "Limpiar".');
+    document.querySelector("[data-nombre]").value = ""
+    document.querySelector("[data-precio]").value = ""
+    document.querySelector("[data-imagen]").value = ""
 });
