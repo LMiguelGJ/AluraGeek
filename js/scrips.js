@@ -37,6 +37,7 @@ async function listaProductos() {
   try {
     const listaAPI = await conectaAPI.listaProductos();
     console.log(listaAPI)
+    lista.innerHTML = ``;
     listaAPI.forEach(element => lista.appendChild(construyeCard(element.id, element.nombre, element.precio, element.imagen)));
   } catch {
     lista.innerHTML = `<h2 class="mensaje__titulo">Ha ocurrido un problema con la conexion :(</h2>`;
