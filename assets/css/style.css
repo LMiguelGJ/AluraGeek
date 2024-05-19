@@ -1,0 +1,351 @@
+
+/* Estilos globales */
+body {
+    width: 100vw; /* Anchura del cuerpo igual al ancho de la ventana del navegador */
+    height: 100vh; /* Altura del cuerpo igual a la altura de la ventana del navegador */
+}
+
+/* Contenedor de la cabecera */
+.head-container {
+    display: flex; /* Mostrar como un contenedor flexible */
+    align-items: center; /* Centrar verticalmente los elementos */
+    justify-content: center; /* Centrar horizontalmente los elementos */
+    width: 100%; /* Ancho del contenedor igual al 100% del ancho del padre */
+    padding: 1rem 0rem 1rem 0rem; /* Espaciado interno */
+    background-color: #5d04d9; /* Color de fondo */
+    box-shadow: 0px 10px 5.8px rgba(0, 0, 0, 0.25); /* Sombra */
+    position: relative; /* Posición relativa */
+    top: 0%; /* Colocar en la parte superior del contenedor padre */
+    left: 0%; /* Colocar en la parte izquierda del contenedor padre */
+}
+
+/* Contenedor del logo */
+.logo{
+    display: flex; /* Mostrar como un contenedor flexible */
+    flex-direction: row; /* Dirección de los elementos en fila */
+    align-items: center; /* Centrar verticalmente los elementos */
+    gap: 15px; /* Espacio entre elementos */
+}
+
+/* Imagen del logo */
+.logo-img{
+    width: 8rem; /* Ancho de la imagen del logo */
+    height: 2.5rem; /* Altura de la imagen del logo */
+}
+
+/* Sección principal */
+.main section{
+    display: flex; /* Mostrar como un contenedor flexible */
+    flex-direction: row; /* Dirección de los elementos en fila */
+    justify-content: center; /* Centrar horizontalmente los elementos */
+    align-items: flex-start; /* Alinear elementos al inicio verticalmente */
+    padding: 1rem 40px 1rem 40px; /* Espaciado interno */
+    gap: 70px; /* Espacio entre elementos */
+    border-radius: 10px; /* Radio del borde */
+}
+
+/* Contenedor principal */
+body {
+    display: flex; /* Mostrar como un contenedor flexible */
+    flex-direction: column; /* Dirección de los elementos en columna */
+    align-items: center; /* Centrar verticalmente los elementos */
+}
+
+/* Contenedor principal de productos */
+.main-product {
+    display: flex; /* Mostrar como un contenedor flexible */
+    flex-direction: column; /* Dirección de los elementos en columna */
+    align-items: center; /* Centrar verticalmente los elementos */
+    padding: 2rem 40px; /* Espaciado interno */
+}
+
+/* Lista de productos principales */
+.main-product-list {
+    display: grid; /* Mostrar como una cuadrícula */
+    grid-template-columns: repeat(3, 1fr);  /* 3 columnas iguales */
+    gap: 10px; /* Espacio entre elementos */
+    overflow-y: auto; /* Desbordamiento vertical automático */
+    max-height: 35rem; /* Altura máxima */
+    padding: 1rem; /* Espaciado interno */
+    scrollbar-width: thin; /* Ancho de la barra de desplazamiento */
+    scrollbar-color: #6c63ff #f5f5f5; /* Color de la barra de desplazamiento */
+    box-shadow: -12px 10px 5.8px rgba(0, 0, 0, 0.25); /* Sombra */
+}
+
+/* Tarjeta de producto */
+.card {
+    box-sizing: border-box; /* Incluir el tamaño del borde y el relleno en el tamaño total */
+    display: flex; /* Mostrar como un contenedor flexible */
+    flex-direction: column; /* Dirección de los elementos en columna */
+    justify-content: center; /* Centrar verticalmente los elementos */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 4rem; /* Margen inferior */
+    background: #5D04D9; /* Color de fondo */
+    border: 3px solid #000000; /* Borde */
+    box-shadow: -5px 6px 3.3px rgba(0, 0, 0, 0.25); /* Sombra */
+    border-radius: 10px; /* Radio del borde */
+}
+
+/* Título de producto principal */
+.main-product h1{
+    width: 578px; /* Ancho del título */
+    height: 24px; /* Altura del título */
+    text-align: center; /* Alinear texto al centro */
+    font-family: 'Press Start 2P'; /* Familia de fuente */
+    font-style: normal; /* Estilo de la fuente */
+    font-weight: 400; /* Grosor de la fuente */
+    font-size: 24px; /* Tamaño de la fuente */
+    line-height: 24px; /* Altura de línea de la fuente */
+    color: #000000; /* Color del texto */
+    margin-bottom: 2rem; /* Margen inferior */
+}
+
+/* Imagen de la tarjeta */
+.card img:first-child{
+    box-sizing: border-box; /* Incluir el tamaño del borde y el relleno en el tamaño total */
+    width: 176px; /* Ancho de la imagen */
+    height: 174px; /* Altura de la imagen */
+    object-fit: cover; /* Ajuste de la imagen */
+    border: 3px solid #000000; /* Borde */
+    border-radius: 5px; /* Radio del borde */
+}
+
+/* Contenedor de información de la tarjeta */
+.card-container--info p:first-child{
+    width: 176px; /* Ancho del primer párrafo */
+    height: 20px; /* Altura del primer párrafo */
+    font-family: 'IBM Plex Mono'; /* Familia de fuente */
+    font-style: normal; /* Estilo de la fuente */
+    font-weight: 400; /* Grosor de la fuente */
+    font-size: 15px; /* Tamaño de la fuente */
+    line-height: 20px; /* Altura de línea de la fuente */
+    color: #FFFFFF; /* Color del texto */
+}
+
+/* Contenedor de valor de la tarjeta */
+.card-container--value {
+    display: flex; /* Mostrar como un contenedor flexible */
+    flex-direction: row; /* Dirección de los elementos en fila */
+    justify-content: center; /* Centrar horizontalmente los elementos */
+    align-items: center; /* Centrar verticalmente los elementos */
+    padding: 0px; /* Espaciado interno */
+    gap: 10px; /* Espacio entre elementos */
+    width: 176px; /* Ancho */
+    height: 24px; /* Altura */
+}
+
+/* Primer párrafo del contenedor de valor de
+
+ la tarjeta */
+.card-container--value p:first-child{
+    width: 142px; /* Ancho del primer párrafo */
+    height: 21px; /* Altura del primer párrafo */
+    font-family: 'IBM Plex Mono'; /* Familia de fuente */
+    font-style: normal; /* Estilo de la fuente */
+    font-weight: 700; /* Grosor de la fuente */
+    font-size: 16px; /* Tamaño de la fuente */
+    line-height: 21px; /* Altura de línea de la fuente */
+    color: #FFFFFF; /* Color del texto */
+}
+
+/* Imagen del contenedor de valor de la tarjeta */
+.card-container--value img:first-child{
+    width: 20px; /* Ancho de la imagen */
+    height: 20px; /* Altura de la imagen */
+}
+
+/* Formulario principal */
+.main-form {
+    display: flex; /* Mostrar como un contenedor flexible */
+    flex-direction: column; /* Dirección de los elementos en columna */
+    align-items: center; /* Centrar verticalmente los elementos */
+    padding: 40px; /* Espaciado interno */
+    gap: 40px; /* Espacio entre elementos */
+    width: 472px; /* Ancho */
+    height: 517px; /* Altura */
+    background: #FFFFFF; /* Color de fondo */
+}
+
+/* Primer título del formulario principal */
+.main-form h1:first-child {
+    width: 200px; /* Ancho del primer título */
+    height: 48px; /* Altura del primer título */
+    font-family: 'Press Start 2P'; /* Familia de fuente */
+    font-style: normal; /* Estilo de la fuente */
+    font-weight: 400; /* Grosor de la fuente */
+    font-size: 24px; /* Tamaño de la fuente */
+    line-height: 24px; /* Altura de línea de la fuente */
+    display: flex; /* Mostrar como un contenedor flexible */
+    align-items: center; /* Centrar verticalmente los elementos */
+    text-align: center; /* Alinear texto al centro */
+    color: #000000; /* Color del texto */
+}
+
+/* Entradas de texto del formulario */
+.form-container  input[type="text"],
+.form-container  input[type="number"],
+.form-container  #product-image{
+    width: 392px; /* Ancho de las entradas de texto */
+    height: 58px; /* Altura de las entradas de texto */
+    box-sizing: border-box; /* Incluir el tamaño del borde y el relleno en el tamaño total */
+    background: #FFFFFF; /* Color de fondo */
+    border: 3px solid #03318C; /* Borde */
+    border-radius: 30px; /* Radio del borde */
+    font-family: 'IBM Plex Mono'; /* Familia de fuente */
+    font-style: normal; /* Estilo de la fuente */
+    font-weight: 600; /* Grosor de la fuente */
+    font-size: 16px; /* Tamaño de la fuente */
+    line-height: 21px; /* Altura de línea de la fuente */
+    display: flex; /* Mostrar como un contenedor flexible */
+    align-items: center; /* Centrar verticalmente los elementos */
+    color: #03318C; /* Color del texto */
+    margin-bottom: 2rem; /* Margen inferior */
+    padding: 1rem; /* Espaciado interno */
+}
+
+/* Placeholder del formulario */
+::placeholder {
+    color: #03318C; /* Color del marcador de posición */
+}
+
+/* Botón de enviar */
+#submit-btn{
+    width: 188px; /* Ancho del botón */
+    height: 55px; /* Altura del botón */
+    border-radius: 15px; /* Radio del borde */
+    background: #03318C; /* Color de fondo */
+    border-radius: 15px; /* Radio del borde */
+    font-family: 'IBM Plex Mono'; /* Familia de fuente */
+    font-style: normal; /* Estilo de la fuente */
+    font-weight: 500; /* Grosor de la fuente */
+    font-size: 20px; /* Tamaño de la fuente */
+    line-height: 26px; /* Altura de línea de la fuente */
+    color: #FFFFFF; /* Color del texto */
+    margin: 0px 4px; /* Margen */
+}
+
+/* Botón de limpiar */
+#clear-btn {
+    width: 188px; /* Ancho del botón */
+    height: 55px; /* Altura del botón */
+    background: #FFFFFF; /* Color de fondo */
+    border-radius: 15px; /* Radio del borde */
+    box-sizing: border-box; /* Incluir el tamaño del borde y el relleno en el tamaño total */
+    border: 3px solid #03318C; /* Borde */
+    border-radius: 15px; /* Radio del borde */
+    font-family: 'IBM Plex Mono'; /* Familia de fuente */
+    font-style: normal; /* Estilo de la fuente */
+    font-weight: 500; /* Grosor de la fuente */
+    font-size: 20px; /* Tamaño de la fuente */
+    line-height: 26px; /* Altura de línea de la fuente */
+    color: #03318C; /* Color del texto */
+    margin: 0px 4px; /* Margen */
+}
+
+/* Pie de página */
+footer {
+    display: flex; /* Mostrar como un contenedor flexible */
+    flex-direction: column; /* Dirección de los elementos en columna */
+    justify-content: center; /* Centrar verticalmente los elementos */
+    align-items: center; /* Centrar horizontalmente los elementos */
+    position: relative; /* Posición relativa */
+    bottom: 0%; /* Colocar en la parte inferior del contenedor padre */
+    padding: 1rem 0rem 0rem 0rem; /* Espaciado interno */
+    width: 100%; /* Ancho del pie de página igual al 100% del ancho del padre */
+    background: #5300C8; /* Color de fondo */
+    box-shadow: 0px -10px 9.5px rgba(0, 0, 0, 0.25); /* Sombra */
+}
+
+/* Texto del pie de página */
+footer p{
+    width: 300px; /* Ancho del texto */
+    height: 30px; /* Altura del texto */
+    font-family: 'IBM Plex Mono'; /* Familia de fuente */
+    font-style: normal; /* Estilo de la fuente */
+    font-weight: 400; /* Grosor de la fuente */
+    font-size: 16px; /* Tamaño de la fuente */
+    line-height: 16px; /* Altura de línea de la fuente */
+    display: flex; /* Mostrar como un contenedor flexible */
+    align-items: center; /* Centrar verticalmente los elementos */
+    justify-content: center; /* Centrar horizontalmente
+
+ los elementos */
+    text-align: center; /* Alinear texto al centro */
+    text-transform: uppercase; /* Transformar texto a mayúsculas */
+    color: #FFFFFF; /* Color del texto */
+}
+
+/* Imagen del logo del pie de página */
+.footer-logo-img {
+    width: 8rem; /* Ancho de la imagen del logo */
+    height: 2.5rem; /* Altura de la imagen del logo */
+}
+
+/* Contenedor del logo del pie de página */
+.footer-logo {
+    display: flex; /* Mostrar como un contenedor flexible */
+    flex-direction: row; /* Dirección de los elementos en fila */
+    align-items: center; /* Centrar verticalmente los elementos */
+    justify-content: center; /* Centrar horizontalmente los elementos */
+    gap: 1rem; /* Espacio entre elementos */
+}
+
+/* Texto del logo del pie de página */
+.footer-logo-text {
+    font-family: 'Press Start 2P'; /* Familia de fuente */
+    font-style: normal; /* Estilo de la fuente */
+    font-weight: 400; /* Grosor de la fuente */
+    font-size: 24px; /* Tamaño de la fuente */
+    line-height: 16px; /* Altura de línea de la fuente */
+    display: flex; /* Mostrar como un contenedor flexible */
+    align-items: center; /* Centrar verticalmente los elementos */
+    color: #FFFFFF; /* Color del texto */
+}
+
+/* Estilos del mensaje de título */
+.mensaje__titulo {
+    background-color: #f8d7da; /* Color de fondo */
+    color: #721c24; /* Color del texto */
+    border: 1px solid #f5c6cb; /* Borde */
+    border-radius: 5px; /* Radio del borde */
+    text-align: center; /* Alinear texto al centro */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Animación de giro del spinner */
+.loading-spinner {
+    position: fixed; /* Posición fija */
+    left: 50%; /* Colocar en el centro horizontalmente */
+    top: 50%; /* Colocar en el centro verticalmente */
+    width: 50px; /* Ancho */
+    height: 50px; /* Altura */
+    border: 5px solid rgba(0, 0, 0, 0.1); /* Borde */
+    border-top: 5px solid #333; /* Borde superior */
+    border-radius: 50%; /* Radio del borde */
+    animation: spin 1s linear infinite; /* Animación de giro */
+    transform: translate(-50%, -50%); /* Transformar */
+    z-index: 1000; /* Índice z */
+}
+
+/* Animación de giro */
+@keyframes spin {
+    0% { transform: rotate(0deg); } /* Rotación inicial */
+    100% { transform: rotate(360deg); } /* Rotación completa */
+}
+
+/* Estilos de los elementos en pantalla pequeña */
+@media only screen and (max-width: 991px) {
+    /* Estilos para la sección principal */
+    .main section {
+        flex-direction: column; /* Dirección de los elementos en columna */
+        align-items: center; /* Centrar verticalmente los elementos */
+        padding: 1rem; /* Espaciado interno */
+        gap: 20px; /* Espacio entre elementos */
+    }
+
+    /* Estilos para la lista principal de productos */
+    .main-product-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+    }
+}
