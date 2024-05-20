@@ -1,14 +1,5 @@
 
-const ip = "localhost:3001"; // Especifica el puerto 3001 para el servidor JSON
-
-fetch('https://alura-geek-cyan-two.vercel.app/hello')
-  .then(response => response.json())
-  .then(data => {
-    console.log(data); // Aquí puedes manejar la respuesta del servidor JSON
-  })
-  .catch(error => {
-    console.error('Error al hacer la solicitud:', error);
-  });
+const ip = "https://alura-geek-cyan-two.vercel.app"; // Especifica el puerto 3001 para el servidor JSON
 
 async function listaProductos() {
     try {
