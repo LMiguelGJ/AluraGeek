@@ -1,0 +1,14 @@
+{
+    "rewrites": [
+      {
+        "source": "/productos/(.*)",
+        "destination": "//productos"
+      }
+    ],
+    "builds": [
+      {
+        "src": "/index.html",
+        "use": "@now/node"
+      }
+    ]
+  }
