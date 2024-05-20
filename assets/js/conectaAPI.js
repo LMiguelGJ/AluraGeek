@@ -1,12 +1,14 @@
+const ip = "localhost"
+
 async function listaProductos(){
-    const conexion = await fetch("http://localhost:3001/productos");
+    const conexion = await fetch(`http://${ip}:3001/productos`);
     
     const conexionConvertida = await conexion.json();
     return conexionConvertida;
 }
 
 async function createProduct(nombre,precio,imagen) {
-    const conexion = await fetch("http://localhost:3001/productos", {
+    const conexion = await fetch(`http://${ip}:3001/productos`, {
         method: "POST",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({
@@ -20,7 +22,7 @@ async function createProduct(nombre,precio,imagen) {
 }
 
 async function delateProduct(id) {
-    const conexion = await fetch(`http://localhost:3001/productos/${id}`, {
+    const conexion = await fetch(`http://${ip}:3001/productos/${id}`, {
         method: 'DELETE'
     })
     const conexionConvertida = await conexion.json();
@@ -28,7 +30,7 @@ async function delateProduct(id) {
 }
 
 async function PutProduct(id,nombre,precio,imagen) {
-    const conexion = await fetch(`http://localhost:3001/productos/${id}`, {
+    const conexion = await fetch(`http://${ip}:3001/productos/${id}`, {
         method: "PUT",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({
@@ -38,7 +40,7 @@ async function PutProduct(id,nombre,precio,imagen) {
         })
     })
     const conexionConvertida = await conexion.json();
-    return conexionConvertida;
+    return conexionConvertida;g
 }
 
 
