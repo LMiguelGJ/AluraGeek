@@ -14,6 +14,13 @@ async function listaProductos() {
 
 async function createProduct(nombre, precio, imagen) {
     try {
+        const response = await fetch('http://localhost:3001/hello');
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Error al hacer la solicitud:', error);
+    }
+    try {
         const conexion = await fetch(`http://${ip}/productos`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
