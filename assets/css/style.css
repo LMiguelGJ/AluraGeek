@@ -60,7 +60,10 @@
     border: 3px solid #000000; /* Borde */
     box-shadow: -5px 6px 3.3px rgba(0, 0, 0, 0.25); /* Sombra */
     border-radius: 10px; /* Radio del borde */
+    width: 100%;
 }
+
+
 
 /* Título de producto principal */
 .main-product h1{
@@ -92,6 +95,8 @@
 }
 /* Contenedor de información de la tarjeta */
 .card-container--info p:first-child{
+    white-space: nowrap;
+
     font-family: 'IBM Plex Mono'; /* Familia de fuente */
     font-style: normal; /* Estilo de la fuente */
     font-weight: 400; /* Grosor de la fuente */
@@ -310,7 +315,7 @@ footer p{
 @media only screen and (max-width: 991px) {
     /* Estilos para la sección principal */
     .main section {
-        flex-direction: column; /* Dirección de los elementos en columna */
+        flex-direction: column-reverse; /* Dirección de los elementos en columna */
         align-items: center; /* Centrar verticalmente los elementos */
         padding: 1rem; /* Espaciado interno */
         gap: 1rem; /* Espacio entre elementos */
@@ -346,9 +351,12 @@ footer p{
         padding: 0%;
         margin-top: 2rem;
         margin-bottom: 2rem;
+        height: auto;
+
     }
     .main-product-list {
         grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+        max-height: 50vh;
     }
     .card{
         margin: auto;
@@ -364,6 +372,9 @@ footer p{
     .footer-logo-img {
         width: 5.5rem; /* Ancho de la imagen del logo */
         height: 2rem;
+    }
+    .main-product{
+        padding: 5%;
     }
     .main-form h1:first-child,
     .main-product h1,
