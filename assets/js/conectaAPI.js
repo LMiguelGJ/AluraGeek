@@ -1,4 +1,4 @@
-const ip = "localhost"
+const ip = "127.0.0.1"
 
 async function listaProductos(){
     const conexion = await fetch(`http://${ip}:3001/productos`);
