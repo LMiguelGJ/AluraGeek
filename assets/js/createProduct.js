@@ -12,15 +12,15 @@ async function createProduct(){
     if (!(nombre == "" || precio == "" || imagen == "")) {
         await conectaAPI.createProduct(nombre,precio,imagen)
         console.log('Agregado!.');
-        // Recargar la página
-        location.reload();
     }
 }
 
 // Agregar event listeners para los botones
 submitBtn.addEventListener('click', async function() {
     console.log('Se ha hecho clic en el botón "Enviar".');
-    createProduct()
+    await createProduct()
+    // Recargar la página
+    location.reload();
 });
 
 clearBtn.addEventListener('click', function() {
