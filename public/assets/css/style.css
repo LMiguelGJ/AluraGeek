@@ -107,8 +107,7 @@
     justify-content: space-between; /* Centrar horizontalmente los elementos */
     align-items: center; /* Centrar verticalmente los elementos */
     padding: 0px; /* Espaciado interno */
-    width: 9rem;
-    gap: 10px; /* Espacio entre elementos */
+    gap: 1rem; /* Espacio entre elementos */
 }
 
 /* Primer párrafo del contenedor de valor de
@@ -122,6 +121,7 @@
     font-size: 16px; /* Tamaño de la fuente */
     line-height: 21px; /* Altura de línea de la fuente */
     color: #FFFFFF; /* Color del texto */
+
 }
 
 /* Imagen del contenedor de valor de la tarjeta */
