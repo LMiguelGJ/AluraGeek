@@ -28,10 +28,6 @@ clearBtn.addEventListener('click', function() {
     const imagen = document.querySelector("[data-imagen]").value;
     const id = document.querySelector("[data-formulario]").id;
 
-
-
-
-
     console.log(id)
     if (!(nombre == "" || precio == "" || imagen == "")) {
         conectaAPI.PutProduct(id, nombre, precio, imagen);
