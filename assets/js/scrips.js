@@ -27,7 +27,7 @@ function construyeCard(id,nombre,precio,imagen){
     const cardId = event.target.getAttribute('data-id');
 
     if (cardId) {
-      conectaAPI.delateProduct(cardId);
+      conectaAPI.deleteProduct(cardId);
     }
   });
 

@@ -44,7 +44,7 @@ async function deleteProduct(id) {
     }
 }
 
-async function putProduct(id, nombre, precio, imagen) {
+async function PutProduct(id, nombre, precio, imagen) {
     try {
         const conexion = await fetch(`${ip}/productos/${id}`, {
             method: "PUT",
@@ -67,5 +67,5 @@ export const conectaAPI = {
     listaProductos,
     createProduct,
     deleteProduct,
-    putProduct
+    PutProduct
 };
