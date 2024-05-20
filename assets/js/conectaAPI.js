@@ -24,6 +24,7 @@ async function createProduct(nombre, precio, imagen) {
             })
         });
         const conexionConvertida = await conexion.json();
+        location.reload();
         return conexionConvertida;
     } catch (error) {
         console.error('Error al crear producto:', error);

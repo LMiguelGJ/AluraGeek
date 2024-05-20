@@ -17,10 +17,9 @@ async function createProduct(){
 
 // Agregar event listeners para los botones
 submitBtn.addEventListener('click', async function() {
-    console.log('Se ha hecho clic en el botón "Enviar".');
-    await createProduct()
+    createProduct()
     // Recargar la página
-    location.reload();
+    console.log('Se ha hecho clic en el botón "Enviar".');
 });
 
 clearBtn.addEventListener('click', function() {
@@ -30,12 +29,11 @@ clearBtn.addEventListener('click', function() {
     const imagen = document.querySelector("[data-imagen]").value;
     const id = document.querySelector("[data-formulario]").id;
 
-    console.log(id)
     if (!(nombre == "" || precio == "" || imagen == "")) {
         conectaAPI.PutProduct(id, nombre, precio, imagen);
-        console.log('Atualizado!.');
         // Recargar la página
         location.reload();
+        console.log('Atualizado!.');
     }
 
 });
