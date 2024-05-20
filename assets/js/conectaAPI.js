@@ -1,9 +1,9 @@
 
-const ip = "localhost:3001"; // Especifica el puerto 3001 para el servidor JSON
+const ip = "https://alura-geek-cyan-two.vercel.app"; // Especifica el puerto 3001 para el servidor JSON
 
 async function listaProductos() {
     try {
-        const conexion = await fetch(`http://${ip}/productos`);
+        const conexion = await fetch(`${ip}/productos`);
         const conexionConvertida = await conexion.json();
         return conexionConvertida;
     } catch (error) {
@@ -14,7 +14,7 @@ async function listaProductos() {
 
 async function createProduct(nombre, precio, imagen) {
     try {
-        const conexion = await fetch(`http://${ip}/productos`, {
+        const conexion = await fetch(`${ip}/productos`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -33,7 +33,7 @@ async function createProduct(nombre, precio, imagen) {
 
 async function deleteProduct(id) {
     try {
-        const conexion = await fetch(`http://${ip}/productos/${id}`, {
+        const conexion = await fetch(`${ip}/productos/${id}`, {
             method: 'DELETE'
         });
         const conexionConvertida = await conexion.json();
@@ -46,7 +46,7 @@ async function deleteProduct(id) {
 
 async function putProduct(id, nombre, precio, imagen) {
     try {
-        const conexion = await fetch(`http://${ip}/productos/${id}`, {
+        const conexion = await fetch(`${ip}/productos/${id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
