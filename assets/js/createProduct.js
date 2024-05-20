@@ -4,7 +4,8 @@ import { conectaAPI } from "./conectaAPI.js";
 const submitBtn = document.getElementById('submit-btn');
 const clearBtn = document.getElementById('clear-btn');
 
-async function createProduct(){
+// Agregar event listeners para los botones
+submitBtn.addEventListener('click', async function() {
     const nombre= document.querySelector("[data-nombre]").value;
     const precio=document.querySelector("[data-precio]").value;
     const imagen = document.querySelector("[data-imagen]").value;
@@ -12,12 +13,8 @@ async function createProduct(){
     if (!(nombre == "" || precio == "" || imagen == "")) {
         await conectaAPI.createProduct(nombre,precio,imagen)
         console.log('Agregado!.');
+        location.reload();
     }
-}
-
-// Agregar event listeners para los botones
-submitBtn.addEventListener('click', async function() {
-    createProduct()
     // Recargar la página
     console.log('Se ha hecho clic en el botón "Enviar".');
 });
