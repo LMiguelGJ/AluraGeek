@@ -1,5 +1,5 @@
 
-const ip = "https://alura-geek-cyan-two.vercel.app"; // Especifica el puerto 3001 para el servidor JSON
+const ip = "localhost:3001"; // Especifica el puerto 3001 para el servidor JSON
 
 async function listaProductos() {
     try {
