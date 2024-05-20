@@ -21,7 +21,7 @@
     flex-direction: row; /* Dirección de los elementos en fila */
     justify-content: center; /* Centrar horizontalmente los elementos */
     align-items: self-start; /* Alinear elementos al inicio verticalmente */
-    gap: 10rem;
+    gap: 10%;
     padding: 2rem 0; /* Espaciado interno */
     height: 100vh;
 }
@@ -312,7 +312,7 @@ footer p{
 }
 
 /* Estilos de los elementos en pantalla pequeña */
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1024px) {
     /* Estilos para la sección principal */
     .main section {
         flex-direction: column-reverse; /* Dirección de los elementos en columna */
@@ -345,7 +345,7 @@ footer p{
         width: 100%;
     }
     .main-form{
-        padding: 0%;
+        padding: 3%;
         margin-top: 1rem;
     }
 
@@ -365,7 +365,7 @@ footer p{
         height: 2rem;
     }
     .main-product{
-        padding: 5%;
+        padding: 0%;
     }
     .main-form h1:first-child,
     .main-product h1,
@@ -375,4 +375,15 @@ footer p{
         line-height: 1.5rem; /* Altura de línea de la fuente */
     }
 
+}
+
+@media only screen and (max-width: 400px) {
+   /* Estilos para la lista principal de productos */
+   .main-product-list {
+    grid-template-columns: repeat(1, 1fr); /* 2 columnas iguales */
+    max-height: 50vh;
+}
+.main-form{
+    padding: 3%;
+}
 }
