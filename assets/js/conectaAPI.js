@@ -1,7 +1,7 @@
 
 const ip = "localhost:3001"; // Especifica el puerto 3001 para el servidor JSON
 
-fetch('http://localhost:3001/hello')
+fetch('https://alura-geek-cyan-two.vercel.app/hello')
   .then(response => response.json())
   .then(data => {
     console.log(data); // Aquí puedes manejar la respuesta del servidor JSON
