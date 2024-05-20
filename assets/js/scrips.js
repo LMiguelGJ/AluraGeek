@@ -44,12 +44,7 @@ function construyeCard(id,nombre,precio,imagen){
     document.querySelector("[data-nombre]").value = nombre
     document.querySelector("[data-precio]").value = precio.replace(/[$ ]/g, "")
     document.querySelector("[data-imagen]").value = imgSrc
-
-
   })
-
-
-
   return card;
 }
 
@@ -63,8 +58,6 @@ async function listaProductos() {
   } catch {
     lista.innerHTML = `<h2 class="mensaje__titulo">Ha ocurrido un problema con la conexion :(</h2>`;
   }
-
-
 }
 
 listaProductos();
