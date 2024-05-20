@@ -5,13 +5,13 @@ const submitBtn = document.getElementById('submit-btn');
 const clearBtn = document.getElementById('clear-btn');
 
 // Agregar event listeners para los botones
-submitBtn.addEventListener('click', async function() {
+submitBtn.addEventListener('click', function() {
     const nombre= document.querySelector("[data-nombre]").value;
     const precio=document.querySelector("[data-precio]").value;
     const imagen = document.querySelector("[data-imagen]").value;
 
     if (!(nombre == "" || precio == "" || imagen == "")) {
-        await conectaAPI.createProduct(nombre,precio,imagen)
+        conectaAPI.createProduct(nombre,precio,imagen)
         console.log('Agregado!.');
         location.reload();
     }
