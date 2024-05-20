@@ -12,6 +12,8 @@ async function createProduct(){
     if (!(nombre == "" || precio == "" || imagen == "")) {
         await conectaAPI.createProduct(nombre,precio,imagen)
         console.log('Agregado!.');
+        // Recargar la página
+        location.reload();
     }
 }
 
@@ -19,9 +21,6 @@ async function createProduct(){
 submitBtn.addEventListener('click', async function() {
     console.log('Se ha hecho clic en el botón "Enviar".');
     createProduct()
-    // Recargar la página
-    location.reload();
-
 });
 
 clearBtn.addEventListener('click', function() {
@@ -35,8 +34,8 @@ clearBtn.addEventListener('click', function() {
     if (!(nombre == "" || precio == "" || imagen == "")) {
         conectaAPI.PutProduct(id, nombre, precio, imagen);
         console.log('Atualizado!.');
+        // Recargar la página
+        location.reload();
     }
-    // Recargar la página
-    location.reload();
 
 });
