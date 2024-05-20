@@ -317,18 +317,19 @@ footer p{
     .main section {
         flex-direction: column-reverse; /* Dirección de los elementos en columna */
         align-items: center; /* Centrar verticalmente los elementos */
-        padding: 1rem; /* Espaciado interno */
         gap: 1rem; /* Espacio entre elementos */
+        padding: 0%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        height: auto;
     }
 
     /* Estilos para la lista principal de productos */
     .main-product-list {
         grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+        max-height: 50vh;
     }
 
-}
-
-@media only screen and (max-width: 500px) {
     .form-container,
     .form-container  input[type="text"],
     .form-container  input[type="number"],
@@ -347,17 +348,7 @@ footer p{
         padding: 0%;
         margin-top: 1rem;
     }
-    .main section{
-        padding: 0%;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        height: auto;
 
-    }
-    .main-product-list {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
-        max-height: 50vh;
-    }
     .card{
         margin: auto;
     }
