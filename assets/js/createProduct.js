@@ -19,6 +19,9 @@ async function createProduct(){
 submitBtn.addEventListener('click', async function() {
     console.log('Se ha hecho clic en el botón "Enviar".');
     createProduct()
+    // Recargar la página
+    location.reload();
+
 });
 
 clearBtn.addEventListener('click', function() {
@@ -33,5 +36,7 @@ clearBtn.addEventListener('click', function() {
         conectaAPI.PutProduct(id, nombre, precio, imagen);
         console.log('Atualizado!.');
     }
-    
+    // Recargar la página
+    location.reload();
+
 });

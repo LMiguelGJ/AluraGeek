@@ -46,6 +46,8 @@ function construyeCard(id,nombre,precio,imagen){
     document.querySelector("[data-nombre]").value = nombre
     document.querySelector("[data-precio]").value = precio.replace(/[$ ]/g, "")
     document.querySelector("[data-imagen]").value = imgSrc
+    // Recargar la página
+    location.reload();
   })
   return card;
 }
