@@ -1,22 +1,23 @@
-// See https://github.com/typicode/json-server#module
-const jsonServer = require('json-server')
+const jsonServer = require('json-server');
+const cors = require('cors');
 
-const server = jsonServer.create()
+const server = jsonServer.create();
+const router = jsonServer.router('db.json');
+const middlewares = jsonServer.defaults();
 
-const router = jsonServer.router('db.json')
+server.use(cors()); // Habilitar CORS
 
-const middlewares = jsonServer.defaults()
 
 // Agregar un nuevo endpoint para imprimir "Hola Mundo"
 server.get('/hello', (req, res) => {
     res.json({ message: 'Hola Mundo' })
 })
 
-server.use(middlewares)
-server.use(router)
+server.use(middlewares);
+server.use(router);
 server.listen(3001, () => {
-    console.log('JSON Server is running')
-})
+    console.log('JSON Server is running');
+});
 
-// Export the Server API
-module.exports = server
+// Exportar la API del servidor
+module.exports = server;
