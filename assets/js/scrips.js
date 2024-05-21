@@ -28,7 +28,6 @@ function construyeCard(id,nombre,precio,imagen){
 
     if (cardId) {
       conectaAPI.deleteProduct(cardId);
-      // Recargar la página
       location.reload();
     }
   });
