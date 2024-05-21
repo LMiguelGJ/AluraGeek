@@ -13,6 +13,7 @@ submitBtn.addEventListener('click', function() {
 
     if (!(nombre == "" || precio == "" || imagen == "")) {
         conect.createProduct({
+            id: '99',
             nombre: nombre,
             precio: precio,
             imagen: imagen
