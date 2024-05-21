@@ -53,7 +53,7 @@ function construyeCard(id,nombre,precio,imagen){
 }
 
 
-async function listaProductos() {
+function listaProductos() {
   try {
     const listaAPI = conectaAPI.listaProductos();
     lista.innerHTML = ``;
