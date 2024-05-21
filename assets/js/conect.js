@@ -1,4 +1,4 @@
-const { createProduct, getProducts, updateProduct, deleteProduct } = require('../../api/server.js');
+const { createProduct, getProducts, updateProduct, deleteProduct } = require('api/server.js');
 
 // Crear un nuevo producto
 createProduct({
