@@ -60,6 +60,7 @@ async function listaProductos() {
     lista.innerHTML = ``;
     listaAPI.reverse();
     listaAPI.forEach(element => lista.appendChild(construyeCard(element.id, element.nombre, element.precio, element.imagen)));
+    listaAPI = {}
   } catch {
     lista.innerHTML = `<h2 class="mensaje__titulo">Ha ocurrido un problema con la conexion :(</h2>`;
   }
