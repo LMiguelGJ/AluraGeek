@@ -36,8 +36,7 @@ async function deleteProduct(id) {
         const conexion = await fetch(`${ip}/productos/${id}`, {
             method: 'DELETE'
         });
-        const conexionConvertida = await conexion.json();
-        return conexionConvertida;
+        return conexion.status;
     } catch (error) {
         console.error('Error al eliminar producto:', error);
         throw error;
