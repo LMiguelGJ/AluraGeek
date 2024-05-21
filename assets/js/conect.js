@@ -5,14 +5,14 @@ const ip = "https://alura-geek-cyan-two.vercel.app";
 
 // Función para obtener todos los productos
 async function getProducts() {
-    const response = await fetch('https://alura-geek-cyan-two.vercel.app/productos');
+    const response = await fetch(`${ip}/productos`);
     const data = await response.json();
     return data;
 }
 
 // Función para crear un nuevo producto
 async function createProduct(product) {
-    const response = await fetch('https://alura-geek-cyan-two.vercel.app/productos', {
+    const response = await fetch(`${ip}/productos`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ async function createProduct(product) {
 
 // Función para actualizar un producto por su ID
 async function updateProduct(id, newData) {
-    const response = await fetch(`https://alura-geek-cyan-two.vercel.app/productos/${id}`, {
+    const response = await fetch(`${ip}/productos/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -37,20 +37,15 @@ async function updateProduct(id, newData) {
 
 // Función para eliminar un producto por su ID
 async function deleteProduct(id) {
-    const response = await fetch(`https://alura-geek-cyan-two.vercel.app/productos/${id}`, {
+    const response = await fetch(`${ip}/productos/${id}`, {
         method: 'DELETE',
     });
     return response;
 }
 
-// module.exports = {
-//     getProducts,
-//     createProduct,
-//     updateProduct,
-//     deleteProduct
-// };
-
-
-getProducts().then(products => {
-    console.log(products);
-});
+module.exports = {
+    getProducts,
+    createProduct,
+    updateProduct,
+    deleteProduct
+};

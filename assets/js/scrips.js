@@ -1,6 +1,7 @@
 
 
 import { conectaAPI } from "./conectaAPI.js";
+const { getProducts } = require('./conect.js');
 
 const lista = document.querySelector("[card-list]");
 
@@ -55,12 +56,13 @@ function construyeCard(id,nombre,precio,imagen){
 
 async function listaProductos() {
   try {
-    let listaAPI = await conectaAPI.listaProductos();
-    console.log(listaAPI)
-    lista.innerHTML = ``;
-    listaAPI.reverse();
-    listaAPI.forEach(element => lista.appendChild(construyeCard(element.id, element.nombre, element.precio, element.imagen)));
-    listaAPI = {}
+    // Obtener todos los productos
+    getProducts().then(products => {
+      console.log(products);
+      lista.innerHTML = ``;
+      products.reverse();
+      products.forEach(element => lista.appendChild(construyeCard(element.id, element.nombre, element.precio, element.imagen)));
+    });
   } catch (error) {
     lista.innerHTML = `<h2 class="mensaje__titulo">Ha ocurrido un problema con la conexion ${error} :(</h2>`;
   }
