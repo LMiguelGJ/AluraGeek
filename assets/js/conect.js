@@ -19,8 +19,7 @@ async function createProduct(product) {
         },
         body: JSON.stringify(product),
     });
-    const data = await response.json();
-    return data;
+    return response;
 }
 
 // Función para actualizar un producto por su ID

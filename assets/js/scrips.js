@@ -55,7 +55,7 @@ function construyeCard(id,nombre,precio,imagen){
 // Obtener todos los productos
 conect.getProducts().then(products => {
   console.log(products);
-  // lista.innerHTML = ``;
+  lista.innerHTML = ``;
   // products.reverse();
   products.forEach(element => lista.appendChild(construyeCard(element.id, element.nombre, element.precio, element.imagen)));
 }).catch(error => {
