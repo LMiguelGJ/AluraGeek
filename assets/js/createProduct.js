@@ -1,4 +1,3 @@
-// import { conectaAPI } from "./conectaAPI.js";
 import { conect } from "./conect.js";
 
 
@@ -13,18 +12,15 @@ submitBtn.addEventListener('click', function() {
     const imagen = document.querySelector("[data-imagen]").value;
 
     if (!(nombre == "" || precio == "" || imagen == "")) {
-        // conectaAPI.createProduct(nombre,precio,imagen)
         conect.createProduct({
             nombre: nombre,
             precio: precio,
             imagen: imagen
         }).then(newProduct => {
             console.log('Nuevo producto creado:', newProduct);
+            location.reload();
         });
-        // location.reload();
     }
-    // Recargar la página
-    console.log('Se ha hecho clic en el botón "Enviar".');
 });
 
 clearBtn.addEventListener('click', function() {
@@ -35,7 +31,13 @@ clearBtn.addEventListener('click', function() {
     const id = document.querySelector("[data-formulario]").id;
 
     if (!(nombre == "" || precio == "" || imagen == "")) {
-        conectaAPI.PutProduct(id, nombre, precio, imagen);
+        conect.updateProduct(id, {
+            nombre: nombre,
+            precio: precio,
+            imagen: imagen
+        }).then(() => {
+            console.log('Producto actualizado exitosamente');
+        });
         // location.reload();
     }
 
