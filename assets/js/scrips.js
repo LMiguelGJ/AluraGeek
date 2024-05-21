@@ -27,7 +27,7 @@ function construyeCard(id,nombre,precio,imagen){
     if (cardId) {
       conect.deleteProduct(cardId).then(() => {
       console.log('Producto eliminado exitosamente');
-      // location.reload();
+      location.reload();
     });
     }
   });
@@ -56,7 +56,7 @@ function construyeCard(id,nombre,precio,imagen){
 conect.getProducts().then(products => {
   console.log(products);
   lista.innerHTML = ``;
-  // products.reverse();
+  products.reverse();
   products.forEach(element => lista.appendChild(construyeCard(element.id, element.nombre, element.precio, element.imagen)));
 }).catch(error => {
   lista.innerHTML = `<h2 class="mensaje__titulo">Ha ocurrido un problema con la conexion ${error} :(</h2>`;
