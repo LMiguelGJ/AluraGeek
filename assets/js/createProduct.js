@@ -37,8 +37,8 @@ clearBtn.addEventListener('click', function() {
             imagen: imagen
         }).then(() => {
             console.log('Producto actualizado exitosamente');
+            location.reload();
         });
-        // location.reload();
     }
 
 });
