@@ -56,6 +56,7 @@ function construyeCard(id,nombre,precio,imagen){
 async function listaProductos() {
   try {
     const listaAPI = await conectaAPI.listaProductos();
+    console.log(listaAPI)
     lista.innerHTML = ``;
     listaAPI.reverse();
     listaAPI.forEach(element => lista.appendChild(construyeCard(element.id, element.nombre, element.precio, element.imagen)));
