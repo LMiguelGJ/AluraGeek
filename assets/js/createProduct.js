@@ -12,7 +12,7 @@ submitBtn.addEventListener('click', function() {
 
     if (!(nombre == "" || precio == "" || imagen == "")) {
         conectaAPI.createProduct(nombre,precio,imagen)
-        location.reload();
+        // location.reload();
     }
     // Recargar la página
     console.log('Se ha hecho clic en el botón "Enviar".');
@@ -27,7 +27,7 @@ clearBtn.addEventListener('click', function() {
 
     if (!(nombre == "" || precio == "" || imagen == "")) {
         conectaAPI.PutProduct(id, nombre, precio, imagen);
-        location.reload();
+        // location.reload();
     }
 
 });
