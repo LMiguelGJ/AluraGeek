@@ -18,10 +18,10 @@ submitBtn.addEventListener('click', function() {
             imagen: imagen
         }).then(newProduct => {
             console.log('Nuevo producto creado:', newProduct);
-            location.reload();
+            // location.reload();
         }).catch(error => {
             console.error('Error al crear el producto:', error);
-            location.reload();
+            // location.reload();
         });
     }
 });
@@ -39,10 +39,10 @@ clearBtn.addEventListener('click', function() {
             imagen: imagen
         }).then(() => {
             console.log('Producto actualizado exitosamente');
-            location.reload();
+            // location.reload();
         }).catch(error => {
             console.error('Error al Actualizar el producto:', error);
-            location.reload();
+            // location.reload();
         });
     }
 
