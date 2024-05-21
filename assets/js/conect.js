@@ -1,45 +1,49 @@
-// Ejemplo de cómo usar fetch para interactuar con el servidor JSON
+import axios from 'axios';
 
-// const fetch = require('node-fetch');
-const ip = "https://alura-geek-cyan-two.vercel.app";
+const baseURL = "https://alura-geek-cyan-two.vercel.app";
 
 // Función para obtener todos los productos
 async function getProducts() {
-    const response = await fetch(`${ip}/productos`);
-    const data = await response.json();
-    return data;
+    try {
+        const response = await axios.get(`${baseURL}/productos`);
+        return response.data;
+    } catch (error) {
+        console.error("Error al obtener los productos:", error);
+        throw error;
+    }
 }
 
 // Función para crear un nuevo producto
 async function createProduct(product) {
-    const response = await fetch(`${ip}/productos`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(product)
-    });
-    return response;
+    try {
+        const response = await axios.post(`${baseURL}/productos`, product);
+        return response;
+    } catch (error) {
+        console.error("Error al crear el producto:", error);
+        throw error;
+    }
 }
 
 // Función para actualizar un producto por su ID
 async function updateProduct(id, newData) {
-    const response = await fetch(`${ip}/productos/${id}`, {
-        method: 'PUT',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(newData),
-    });
-    return response;
+    try {
+        const response = await axios.put(`${baseURL}/productos/${id}`, newData);
+        return response;
+    } catch (error) {
+        console.error("Error al actualizar el producto:", error);
+        throw error;
+    }
 }
 
 // Función para eliminar un producto por su ID
 async function deleteProduct(id) {
-    const response = await fetch(`${ip}/productos/${id}`, {
-        method: 'DELETE',
-    });
-    return response;
+    try {
+        const response = await axios.delete(`${baseURL}/productos/${id}`);
+        return response;
+    } catch (error) {
+        console.error("Error al eliminar el producto:", error);
+        throw error;
+    }
 }
 
 export const conect = {
