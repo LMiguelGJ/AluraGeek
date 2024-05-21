@@ -19,12 +19,14 @@ submitBtn.addEventListener('click', function() {
         }).then(newProduct => {
             console.log('Nuevo producto creado:', newProduct);
             location.reload();
+        }).catch(error => {
+            console.error('Error al crear el producto:', error);
+            location.reload();
         });
     }
 });
 
 clearBtn.addEventListener('click', function() {
-    console.log('Se ha hecho clic en el botón "Actualizar".');
     const nombre= document.querySelector("[data-nombre]").value;
     const precio=document.querySelector("[data-precio]").value;
     const imagen = document.querySelector("[data-imagen]").value;
@@ -37,6 +39,9 @@ clearBtn.addEventListener('click', function() {
             imagen: imagen
         }).then(() => {
             console.log('Producto actualizado exitosamente');
+            location.reload();
+        }).catch(error => {
+            console.error('Error al Actualizar el producto:', error);
             location.reload();
         });
     }
