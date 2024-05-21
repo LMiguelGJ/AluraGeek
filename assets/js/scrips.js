@@ -23,11 +23,11 @@ function construyeCard(id,nombre,precio,imagen){
   `
   const deleteIcons = card.querySelector('[data-delate]');
 
-  deleteIcons.addEventListener('click', (event) => {
+  deleteIcons.addEventListener('click', async (event) => {
     const cardId = event.target.getAttribute('data-id');
 
     if (cardId) {
-      const del = conectaAPI.deleteProduct(cardId);
+      const del = await conectaAPI.deleteProduct(cardId);
       console.log(del);
       // location.reload();
     }
