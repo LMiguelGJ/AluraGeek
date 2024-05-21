@@ -43,7 +43,7 @@ async function deleteProduct(id) {
     return response;
 }
 
-module.exports = {
+export const conect = {
     getProducts,
     createProduct,
     updateProduct,

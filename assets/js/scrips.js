@@ -1,7 +1,7 @@
 
 
 import { conectaAPI } from "./conectaAPI.js";
-const { getProducts } = require('./conect.js');
+import { conect } from "./conect.js";
 
 const lista = document.querySelector("[card-list]");
 
@@ -57,7 +57,7 @@ function construyeCard(id,nombre,precio,imagen){
 async function listaProductos() {
   try {
     // Obtener todos los productos
-    getProducts().then(products => {
+    conect.getProducts().then(products => {
       console.log(products);
       lista.innerHTML = ``;
       products.reverse();
