@@ -1,49 +1,44 @@
-import axios from 'axios';
 
-const baseURL = "https://alura-geek-cyan-two.vercel.app";
+// const fetch = require('node-fetch');
+const ip = "https://alura-geek-cyan-two.vercel.app";
 
 // Función para obtener todos los productos
 async function getProducts() {
-    try {
-        const response = await axios.get(`${baseURL}/productos`);
-        return response.data;
-    } catch (error) {
-        console.error("Error al obtener los productos:", error);
-        throw error;
-    }
+    const response = await fetch(`${ip}/productos`);
+    const data = await response.json();
+    return data;
 }
 
 // Función para crear un nuevo producto
 async function createProduct(product) {
-    try {
-        const response = await axios.post(`${baseURL}/productos`, product);
-        return response;
-    } catch (error) {
-        console.error("Error al crear el producto:", error);
-        throw error;
-    }
+    const response = await fetch(`${ip}/productos`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(product)
+    });
+    return response;
 }
 
 // Función para actualizar un producto por su ID
 async function updateProduct(id, newData) {
-    try {
-        const response = await axios.put(`${baseURL}/productos/${id}`, newData);
-        return response;
-    } catch (error) {
-        console.error("Error al actualizar el producto:", error);
-        throw error;
-    }
+    const response = await fetch(`${ip}/productos/${id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newData),
+    });
+    return response;
 }
 
 // Función para eliminar un producto por su ID
 async function deleteProduct(id) {
-    try {
-        const response = await axios.delete(`${baseURL}/productos/${id}`);
-        return response;
-    } catch (error) {
-        console.error("Error al eliminar el producto:", error);
-        throw error;
-    }
+    const response = await fetch(`${ip}/productos/${id}`, {
+        method: 'DELETE',
+    });
+    return response;
 }
 
 export const conect = {
