@@ -1,6 +1,3 @@
-
-
-import { conectaAPI } from "./conectaAPI.js";
 import { conect } from "./conect.js";
 
 const lista = document.querySelector("[card-list]");

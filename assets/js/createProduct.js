@@ -1,4 +1,6 @@
-import { conectaAPI } from "./conectaAPI.js";
+// import { conectaAPI } from "./conectaAPI.js";
+import { conect } from "./conect.js";
+
 
 // Capturar los botones
 const submitBtn = document.getElementById('submit-btn');
@@ -11,7 +13,14 @@ submitBtn.addEventListener('click', function() {
     const imagen = document.querySelector("[data-imagen]").value;
 
     if (!(nombre == "" || precio == "" || imagen == "")) {
-        conectaAPI.createProduct(nombre,precio,imagen)
+        // conectaAPI.createProduct(nombre,precio,imagen)
+        conect.createProduct({
+            nombre: nombre,
+            precio: precio,
+            imagen: imagen
+        }).then(newProduct => {
+            console.log('Nuevo producto creado:', newProduct);
+        });
         // location.reload();
     }
     // Recargar la página
