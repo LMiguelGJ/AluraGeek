@@ -55,10 +55,9 @@ function construyeCard(id,nombre,precio,imagen){
 
 async function listaProductos() {
   try {
-    const listaAPI = await conectaAPI.listaProductos();
+    const listaAPI = conectaAPI.listaProductos();
     lista.innerHTML = ``;
-    listaAPI.reverse();
-    listaAPI.forEach(element => lista.appendChild(construyeCard(element.id, element.nombre, element.precio, element.imagen)));
+    listaAPI.forEach(element => lista.appendChild(construyeCard(element.id, element.nombre, element.precio, element.imagen))).reverse();
   } catch {
     lista.innerHTML = `<h2 class="mensaje__titulo">Ha ocurrido un problema con la conexion :(</h2>`;
   }
