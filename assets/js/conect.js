@@ -1,7 +1,7 @@
 // Ejemplo de cómo usar fetch para interactuar con el servidor JSON
 
 // const fetch = require('node-fetch');
-const ip = "https://alura-geek-cyan-two.vercel.app";
+const ip = "http://alura-geek-cyan-two.vercel.app";
 
 // Función para obtener todos los productos
 async function getProducts() {
