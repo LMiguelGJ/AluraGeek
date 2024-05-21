@@ -29,7 +29,7 @@ function construyeCard(id,nombre,precio,imagen){
     if (cardId) {
       const del = await conectaAPI.deleteProduct(cardId);
       console.log(del);
-      // location.reload();
+      location.reload();
     }
   });
 
