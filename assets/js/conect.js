@@ -17,7 +17,7 @@ async function createProduct(product) {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: product,
+        body: product.json(),
     });
     return response;
 }
