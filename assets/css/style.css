@@ -21,7 +21,7 @@
     flex-direction: row; /* Dirección de los elementos en fila */
     justify-content: center; /* Centrar horizontalmente los elementos */
     align-items: self-start; /* Alinear elementos al inicio verticalmente */
-    gap: 10%;
+    gap: 5%;
     padding: 2rem 0; /* Espaciado interno */
     height: 100vh;
 }
