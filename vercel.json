@@ -6,9 +6,9 @@
     }
   },
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "api/server.js"
-    }
+    {"source": "/admin/", "destination": "https://alura-geek-cyan-two.vercel.app/"},
+    {"source": "/admin/:match*", "destination": "https://alura-geek-cyan-two.vercel.app/:match*"},
+    {"source": "/", "destination": "https://alura-geek-cyan-two.vercel.app/"},
+    {"source": "/:match*", "destination": "https://alura-geek-cyan-two.vercel.app/:match*"}
   ]
 }
