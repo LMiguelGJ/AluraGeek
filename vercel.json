@@ -5,11 +5,18 @@
     }
   },
   "rewrites": [
-
-    {"source": "/productos/", "destination": "https://alura-geek-cyan-two.vercel.app/"},
-    {"source": "/productos/:match*", "destination": "https://alura-geek-cyan-two.vercel.app/:match*"},
-    {"source": "/", "destination": "https://alura-geek-cyan-two.vercel.app/"},
-    {"source": "/:match*", "destination": "https://alura-geek-cyan-two.vercel.app/:match*"}
+    {
+      "source": "/(.*)",
+      "destination": "api/server.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://alura-geek-cyan-two.vercel.app/"
+    },
+    {
+      "source": "/productos/(.*)",
+      "destination": "api/server.js"
+    }
   ]
 }
 
