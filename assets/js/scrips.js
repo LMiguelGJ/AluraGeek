@@ -1,7 +1,5 @@
 import { conect } from "./conect.js";
 
-const lista = document.querySelector("[card-list]");
-
 function construyeCard(id,nombre,precio,imagen){
     const card = document.createElement("div");
     card.className="card";
@@ -51,13 +49,20 @@ function construyeCard(id,nombre,precio,imagen){
   return card;
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  const lista = document.querySelector("[card-list]");
 
-// Obtener todos los productos
-conect.getProducts().then(products => {
-  console.log(products);
-  lista.innerHTML = ``;
-  products.reverse();
-  products.forEach(element => lista.appendChild(construyeCard(element.id, element.nombre, element.precio, element.imagen)));
-}).catch(error => {
-  lista.innerHTML = `<h2 class="mensaje__titulo">Ha ocurrido un problema con la conexion ${error} :(</h2>`;
+  // Obtener todos los productos
+  conect.getProducts().then(products => {
+      if (length(products) == 0) {
+        location.reload();
+      } else {
+        console.log(products);
+        lista.innerHTML = ``;
+        products.reverse();
+        products.forEach(element => lista.appendChild(construyeCard(element.id, element.nombre, element.precio, element.imagen)));
+      }
+  }).catch(error => {
+      lista.innerHTML = `<h2 class="mensaje__titulo">Ha ocurrido un problema con la conexión ${error} :(</h2>`;
+  });
 });
