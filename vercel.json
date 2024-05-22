@@ -3,6 +3,12 @@
     "api/server.js": {
       "includeFiles": "db.json"
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/productos/(.*)",
+      "destination": "api/server.js"
+    }
+  ]
 }
 
