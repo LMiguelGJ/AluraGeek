@@ -1,8 +1,6 @@
 {
-  "functions": {
-    "api/server.js": {
-      "includeFiles": "db.json"
-    }
+  "config": {
+    "includeFiles": ["db.json"]
   },
   "rewrites": [
     {
@@ -11,3 +9,4 @@
     }
   ]
 }
+
