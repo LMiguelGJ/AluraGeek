@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Obtener todos los productos
   conect.getProducts().then(products => {
-      if (length(products) == 0) {
+      if (products.length === 0) {
         location.reload();
       } else {
         console.log(products);
