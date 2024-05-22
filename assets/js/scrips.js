@@ -26,13 +26,9 @@ function construyeCard(id,nombre,precio,imagen){
 
     if (cardId) {
       conect.deleteProduct(cardId).then(() => {
-        console.log('Producto eliminado exitosamente');
-        location.reload();
-      }).then(() => {
-        location.reload();
-      }).catch(error => {
-        location.reload();
-      });;
+      console.log('Producto eliminado exitosamente');
+      location.reload();
+    });
     }
   });
 
