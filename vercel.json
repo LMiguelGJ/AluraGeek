@@ -5,12 +5,9 @@
     }
   },
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "api/server.js"
-    },
-    {"source": "/admin/", "destination": "https://admin-app.vercel.com/"},
-    {"source": "/admin/:match*", "destination": "https://admin-app.vercel.com/:match*"},
+
+    {"source": "/productos/", "destination": "https://alura-geek-cyan-two.vercel.app/"},
+    {"source": "/productos/:match*", "destination": "https://alura-geek-cyan-two.vercel.app/:match*"},
     {"source": "/", "destination": "https://alura-geek-cyan-two.vercel.app/"},
     {"source": "/:match*", "destination": "https://alura-geek-cyan-two.vercel.app/:match*"}
   ]
